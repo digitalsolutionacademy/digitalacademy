@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Solution Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+    }
+    
+    body {
+      background-color: #f8fafc;
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+    
+    /* Custom animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .delay-200 {
+      animation-delay: 200ms;
+    }
+    
+    .delay-400 {
+      animation-delay: 400ms;
+    }
+    
+    .delay-600 {
+      animation-delay: 600ms;
+    }
+    
+    /* Custom gradient */
+    .hero-gradient {
+      background: linear-gradient(135deg, #1da1f2 0%, #0c7abf 100%);
+    }
+    
+    /* Card hover effects */
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    /* Hamburger menu */
+    .hamburger {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      transition: all 0.25s;
+      position: relative;
+    }
+    
+    .hamburger-top,
+    .hamburger-middle,
+    .hamburger-bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(0);
+      transition: all 0.5s;
+    }
+    
+    .hamburger-middle {
+      transform: translateY(7px);
+    }
+    
+    .hamburger-bottom {
+      transform: translateY(14px);
+    }
+    
+    .open {
+      transform: rotate(90deg);
+      transform: translateY(0px);
+    }
+    
+    .open .hamburger-top {
+      transform: rotate(45deg) translateY(6px) translate(6px);
+    }
+    
+    .open .hamburger-middle {
+      display: none;
+    }
+    
+    .open .hamburger-bottom {
+      transform: rotate(-45deg) translateY(6px) translate(-6px);
+    }
+    
+    /* Mobile menu */
+    #mobile-menu {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Navbar -->
+  <header class="hero-gradient text-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+     <img src="Asset 2.png" width="80" height="mx-auto">
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-[#fbad17] transition-colors duration-300">About</a>
+        <a href="#courses" class="hover:text-[#fbad17] transition-colors duration-300">Courses</a>
+        <a href="#services" class="hover:text-[#fbad17] transition-colors duration-300">Services</a>
+        <a href="#contact" class="hover:text-[#fbad17] transition-colors duration-300">Contact</a>
+      </nav>
+      
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="hamburger focus:outline-none">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden hero-gradient px-6 pb-4 pt-2">
+      <div class="flex flex-col space-y-3">
+        <a href="#about" class="hover:text-[#fbad17] transition-colors duration-300 py-2">About</a>
+        <a href="#courses" class="hover:text-[#fbad17] transition-colors duration-300 py-2">Courses</a>
+        <a href="#services" class="hover:text-[#fbad17] transition-colors duration-300 py-2">Services</a>
+        <a href="#contact" class="hover:text-[#fbad17] transition-colors duration-300 py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white pt-32 pb-20 px-6">
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight" style=" font-family: 'Bebas Neue', sans-serif; letter-spacing: 5px;">Empowering Our Community with Digital Knowledge</h2>
+        <p class="text-lg md:text-xl mb-6 opacity-90">Learn skills that prepare you for jobs and opportunities in the digital age.</p>
+        <a href="#courses" class="bg-[#fbad17] text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          Enroll Now <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="md:w-1/2 flex justify-center animate-float">
+        <img src="coure.png" alt="Online Learning" class="w-full max-w-md">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 container mx-auto px-6 scroll-mt-20">
+    <h3 class="text-3xl font-bold text-center text-[#1da1f2] mb-12 relative inline-block mx-auto">
+      About Us
+      <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#fbad17] rounded-full"></span>
+    </h3>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white shadow-md p-6 rounded-lg card-hover opacity-0 animate-fade-in">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
+          <i class="fas fa-eye text-2xl text-[#1da1f2]"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Our Vision</h4>
+        <p class="text-gray-600">To bring digital knowledge to our rural community and give everyone a chance to grow.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-lg card-hover opacity-0 animate-fade-in delay-200">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
+          <i class="fas fa-bullseye text-2xl text-[#1da1f2]"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Our Mission</h4>
+        <p class="text-gray-600">We teach people digital skills, make learning easy and prepare young people for opportunities in the digital age.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-lg card-hover opacity-0 animate-fade-in delay-400">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
+          <i class="fas fa-heart text-2xl text-[#1da1f2]"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Our Values</h4>
+        <p class="text-gray-600">Learning for All • Creativity • Honesty • Helping Community • Quality • Teamwork</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="py-16 bg-gray-50 scroll-mt-20">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-[#1da1f2] mb-12 relative inline-block mx-auto">
+        Our Courses
+        <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#fbad17] rounded-full"></span>
+      </h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Web Development (Online) -->
+        <div class="bg-white p-6 rounded-lg shadow-md card-hover opacity-0 animate-fade-in">
+          <div class="w-16 h-16 mb-4 rounded-full bg-orange-100 flex items-center justify-center">
+            <i class="fas fa-code text-2xl text-[#fbad17]"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Web Development</h4>
+          <p class="mb-4 text-gray-600">Online course: Learn HTML, CSS, JavaScript, Git/GitHub, and build your first website.</p>
+          <span class="bg-green-500 text-white text-sm px-3 py-1 rounded-full">Available Online</span>
+        </div>
+
+        <!-- Other Courses -->
+        <div class="bg-white p-6 rounded-lg shadow-md card-hover opacity-0 animate-fade-in delay-200">
+          <div class="w-16 h-16 mb-4 rounded-full bg-orange-100 flex items-center justify-center">
+            <i class="fas fa-laptop-code text-2xl text-[#fbad17]"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Computer Fundamentals</h4>
+          <p class="text-gray-600">Physical Class: Learn the basics of using computers, Microsoft Office, and the internet.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md card-hover opacity-0 animate-fade-in delay-400">
+          <div class="w-16 h-16 mb-4 rounded-full bg-orange-100 flex items-center justify-center">
+            <i class="fas fa-paint-brush text-2xl text-[#fbad17]"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Graphics Design</h4>
+          <p class="text-gray-600">Physical Class: Learn design principles and tools like Inkscape and Figma for logos and social media.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 container mx-auto px-6 scroll-mt-20">
+    <h3 class="text-3xl font-bold text-center text-[#1da1f2] mb-12 relative inline-block mx-auto">
+      Our Services
+      <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#fbad17] rounded-full"></span>
+    </h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 shadow-md rounded-lg text-center card-hover opacity-0 animate-fade-in">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
+          <i class="fas fa-chalkboard-teacher text-2xl text-[#1da1f2]"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Digital Skill Training</h4>
+        <p class="text-gray-600">Comprehensive training programs to master digital skills for the modern workplace.</p>
+      </div>
+      <div class="bg-white p-6 shadow-md rounded-lg text-center card-hover opacity-0 animate-fade-in delay-200">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
+          <i class="fas fa-globe text-2xl text-[#1da1f2]"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Web & Mobile Development</h4>
+        <p class="text-gray-600">Custom website and application development services for businesses and individuals.</p>
+      </div>
+      <div class="bg-white p-6 shadow-md rounded-lg text-center card-hover opacity-0 animate-fade-in delay-400">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
+          <i class="fas fa-palette text-2xl text-[#1da1f2]"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Graphics & Printing</h4>
+        <p class="text-gray-600">Professional design services for branding, marketing materials, and custom printing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="hero-gradient text-white py-16 scroll-mt-20">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-12 relative inline-block">
+        Contact Us
+        <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#fbad17] rounded-full"></span>
+      </h3>
+      <div class="max-w-lg mx-auto space-y-6 opacity-0 animate-fade-in">
+        <p class="flex items-center justify-center">
+          <i class="fas fa-envelope mr-3 text-[#fbad17]"></i> Email: digitalsolutionacademic@gmail.com
+        </p>
+        <p class="flex items-center justify-center">
+          <i class="fas fa-phone mr-3 text-[#fbad17]"></i> Phone: 09071943490
+        </p>
+        <p class="flex items-center justify-center">
+          <i class="fab fa-facebook mr-3 text-[#fbad17]"></i> Facebook: 
+          <a href="http://www.facebook.com/digitasolutionacademy" class="underline hover:text-[#fbad17] ml-1 transition-colors">facebook.com/digitasolutionacademy</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+    <div class="container mx-auto px-6">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="hover:text-[#fbad17] transition-colors"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-[#fbad17] transition-colors"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-[#fbad17] transition-colors"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-[#fbad17] transition-colors"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p>© 2025 Digital Solution Academy. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu functionality
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    });
+    
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        btn.classList.remove('open');
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+      });
+    });
+    
+    // Animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedElements = document.querySelectorAll('.animate-fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      animatedElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
