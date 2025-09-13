@@ -17,63 +17,48 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="antialiased">
-    <header class="hero-gradient text-white shadow-md fixed w-full z-50">
+       <header class="hero-gradient text-white shadow-md fixed w-full z-50">
       <div
         class="container mx-auto flex justify-between items-center py-4 px-6">
         <!-- Logo - Full on desktop, symbol only on mobile -->
         <div class="flex items-center">
-          <img
-            src="images/desktop-logo.svg"
-            width="200"
-            height="auto"
-            alt="Digital Solution Academy Logo"
-            class="hidden md:block" />
-          <img
-            src="images/mobile-logo.svg"
-            width="50"
-            height="auto"
-            alt="DSA Logo"
-            class="md:hidden"
-            style="object-fit: contain; object-position: left center" />
+          <a href="index.html">
+            <img
+              src="images/desktop-logo.png"
+              width="200"
+              height="auto"
+              alt="Digital Solution Academy Logo"
+              class="hidden md:block" />
+          </a>
+          <a href="index.html">
+            <img
+              src="images/mobile-logo.png"
+              width="50"
+              height="auto"
+              alt="DSA Logo"
+              class="md:hidden"
+              style="object-fit: contain; object-position: left center" />
+          </a>
         </div>
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex space-x-6 items-center">
           <a
-            href="#about"
-            class="hover:text-[#fbad17] transition-colors duration-300"
-            >About</a
-          >
-          <a
-            href="#courses"
-            class="hover:text-[#fbad17] transition-colors duration-300"
-            >Courses</a
-          >
-          <a
-            href="#testimonials"
-            class="hover:text-[#fbad17] transition-colors duration-300"
-            >Testimonials</a
-          >
-          <a
-            href="#services"
-            class="hover:text-[#fbad17] transition-colors duration-300"
-            >Services</a
-          >
-          <a
-            href="#contact"
-            class="hover:text-[#fbad17] transition-colors duration-300"
-            >Contact</a
-          >
-          <!-- Register Now Button -->
-          <a
-            href="#courses"
+            href="Login.html"
             class="bg-[#fbad17] text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ml-4">
-            Register Now
+            Login Now
           </a>
         </nav>
 
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
+          <!-- Login Now Button (Mobile) -->
+          <a
+            href="Login.html"
+            class="bg-[#fbad17] text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 text-center mt-2">
+            Login Now
+          </a>
+
           <button id="menu-btn" class="hamburger focus:outline-none">
             <span class="hamburger-top"></span>
             <span class="hamburger-middle"></span>
@@ -87,41 +72,15 @@
         id="mobile-menu"
         class="hidden md:hidden hero-gradient px-6 pb-4 pt-2">
         <div class="flex flex-col space-y-3">
+          <!-- Login Now Button in Mobile Menu -->
           <a
-            href="#about"
-            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
-            >About</a
-          >
-          <a
-            href="#courses"
-            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
-            >Courses</a
-          >
-          <a
-            href="#testimonials"
-            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
-            >Testimonials</a
-          >
-          <a
-            href="#services"
-            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
-            >Services</a
-          >
-          <a
-            href="#contact"
-            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
-            >Contact</a
-          >
-          <!-- Register Now Button in Mobile Menu -->
-          <a
-            href="#courses"
+            href="Login.html"
             class="bg-[#fbad17] text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 text-center mt-2">
-            Register Now
+            Login Now
           </a>
         </div>
       </div>
     </header>
-
     <!-- Hero Section -->
     <section class="hero-gradient text-white pt-20 md:pt-32 pb-20 px-6">
       <div class="container mx-auto flex flex-col md:flex-row items-center">
