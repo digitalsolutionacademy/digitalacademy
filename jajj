@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Solution Academy</title>
-    <link rel="icon" href="images/32.svg" type="image/svg+xml" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body class="antialiased">
-       <header class="hero-gradient text-white shadow-md fixed w-full z-50">
+    <header class="hero-gradient text-white shadow-md fixed w-full z-50">
       <div
         class="container mx-auto flex justify-between items-center py-4 px-6">
         <!-- Logo - Full on desktop, symbol only on mobile -->
@@ -81,9 +62,3 @@
         </div>
       </div>
     </header>
-    <!-- Hero Section -->
-   
-
-    <script src="js/script.js"></script>
-  </body>
-</html>
