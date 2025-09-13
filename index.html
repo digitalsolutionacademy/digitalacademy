@@ -17,48 +17,69 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="antialiased">
-       <header class="hero-gradient text-white shadow-md fixed w-full z-50">
+    <header class="hero-gradient text-white shadow-md fixed w-full z-50">
       <div
         class="container mx-auto flex justify-between items-center py-4 px-6">
         <!-- Logo - Full on desktop, symbol only on mobile -->
         <div class="flex items-center">
-          <a href="index.html">
-            <img
-              src="images/desktop-logo.png"
-              width="200"
-              height="auto"
-              alt="Digital Solution Academy Logo"
-              class="hidden md:block" />
-          </a>
-          <a href="index.html">
-            <img
-              src="images/mobile-logo.png"
-              width="50"
-              height="auto"
-              alt="DSA Logo"
-              class="md:hidden"
-              style="object-fit: contain; object-position: left center" />
-          </a>
+          <img
+            src="images/desktop-logo.svg"
+            width="200"
+            height="auto"
+            alt="Digital Solution Academy Logo"
+            class="hidden md:block" />
+          <img
+            src="images/mobile-logo.svg"
+            width="50"
+            height="auto"
+            alt="DSA Logo"
+            class="md:hidden"
+            style="object-fit: contain; object-position: left center" />
         </div>
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex space-x-6 items-center">
           <a
-            href="Login.html"
+            href="#about"
+            class="hover:text-[#fbad17] transition-colors duration-300"
+            >About</a
+          >
+          <a
+            href="#courses"
+            class="hover:text-[#fbad17] transition-colors duration-300"
+            >Courses</a
+          >
+          <a
+            href="#testimonials"
+            class="hover:text-[#fbad17] transition-colors duration-300"
+            >Testimonials</a
+          >
+          <a
+            href="#services"
+            class="hover:text-[#fbad17] transition-colors duration-300"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-[#fbad17] transition-colors duration-300"
+            >Contact</a
+          >
+          <!-- Register Now Button -->
+          <a
+            href="#courses"
             class="bg-[#fbad17] text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ml-4">
-            Login Now
+            Register Now
           </a>
         </nav>
 
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
-          <!-- Login Now Button (Mobile) -->
+          <!-- Register Now Button (Mobile) -->
           <a
-            href="Login.html"
-            class="bg-[#fbad17] text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 text-center mt-2">
-            Login Now
+            href="#courses"
+            class="bg-[#fbad17] text-black px-3 py-1.5 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-md mr-4 text-sm">
+            Register
           </a>
-
           <button id="menu-btn" class="hamburger focus:outline-none">
             <span class="hamburger-top"></span>
             <span class="hamburger-middle"></span>
@@ -72,17 +93,69 @@
         id="mobile-menu"
         class="hidden md:hidden hero-gradient px-6 pb-4 pt-2">
         <div class="flex flex-col space-y-3">
-          <!-- Login Now Button in Mobile Menu -->
           <a
-            href="Login.html"
-            class="bg-[#fbad17] text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 text-center mt-2">
-            Login Now
-          </a>
+            href="#about"
+            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
+            >About</a
+          >
+          <a
+            href="#courses"
+            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
+            >Courses</a
+          >
+          <a
+            href="#testimonials"
+            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
+            >Testimonials</a
+          >
+          <a
+            href="#services"
+            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-[#fbad17] transition-colors duration-300 py-2"
+            >Contact</a
+          >
         </div>
       </div>
     </header>
     <!-- Hero Section -->
-   
+    <section class="hero-gradient text-white pt-20 md:pt-32 pb-20 px-6">
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-4 leading-tight"
+            style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 5px">
+            Empowering Our Community with Digital Knowledge
+          </h2>
+          <p class="text-lg md:text-xl mb-6 opacity-90">
+            Learn skills that prepare you for jobs and opportunities in the
+            digital age.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="Register.html"
+              class="bg-[#fbad17] text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              Register Now! <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a
+              href="#contact"
+              class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#1da1f2] transition-all duration-300 inline-flex items-center justify-center">
+              Contact Us <i class="fas fa-phone ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center animate-float">
+          <img
+            src="images/hero-image.svg"
+            alt="Online Learning"
+            class="w-full max-w-md"
+            loading="lazy" />
+        </div>
+      </div>
+    </section>
 
     <script src="js/script.js"></script>
   </body>
