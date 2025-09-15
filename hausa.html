@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ha">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Solution Academy</title>
+    <link rel="icon" href="images/32.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="antialiased">
+    <header class="hero-gradient text-white shadow-md fixed w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img src="images/desktop-logo.svg" width="200" alt="Tambarin Digital Solution Academy" class="hidden md:block" />
+          <img src="images/mobile-logo.svg" width="50" alt="Tambarin DSA" class="md:hidden" />
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6 items-center">
+          <a href="#about" class="hover:text-[#fbad17]">Game da Mu</a>
+          <a href="#courses" class="hover:text-[#fbad17]">Darussa</a>
+          <a href="#testimonials" class="hover:text-[#fbad17]">Shaidu</a>
+          <a href="#services" class="hover:text-[#fbad17]">Ayyuka</a>
+          <a href="#contact" class="hover:text-[#fbad17]">Tuntuɓe Mu</a>
+          <a href="Register.html" class="bg-[#fbad17] text-black px-4 py-2 rounded-lg font-semibold">
+            Yi Rijista Yanzu
+          </a>
+        </nav>
+
+        <!-- Mobile -->
+        <div class="md:hidden flex items-center">
+          <a href="#courses" class="bg-[#fbad17] text-black px-3 py-1.5 rounded-lg font-semibold text-sm">
+            Rijista
+          </a>
+          <button id="menu-btn" class="hamburger focus:outline-none">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden hero-gradient px-6 pb-4 pt-2">
+        <div class="flex flex-col space-y-3">
+          <a href="#about" class="hover:text-[#fbad17] py-2">Game da Mu</a>
+          <a href="#courses" class="hover:text-[#fbad17] py-2">Darussa</a>
+          <a href="#testimonials" class="hover:text-[#fbad17] py-2">Shaidu</a>
+          <a href="#services" class="hover:text-[#fbad17] py-2">Ayyuka</a>
+          <a href="#contact" class="hover:text-[#fbad17] py-2">Tuntuɓe Mu</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white pt-20 md:pt-40 pb-20 px-6">
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            Ƙarfafa Al’umma da Ilimin Dijital
+          </h2>
+          <p class="text-lg md:text-xl mb-6 opacity-90">
+            Koyi ƙwarewar da za ta shirya ka domin ayyuka da dama a duniyar zamani.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="Register.html" class="bg-[#fbad17] text-black px-6 py-3 rounded-lg font-semibold">
+              Yi Rijista Yanzu! <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="#contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold">
+              Tuntuɓe Mu <i class="fas fa-phone ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="images/hero-image.svg" alt="Koyon Kan Layi" class="w-full max-w-md" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-[#1da1f2] mb-12">
+        Game da Mu
+      </h3>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white shadow-md p-6 rounded-lg">
+          <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Manufarmu</h4>
+          <p class="text-gray-600">
+            Mu kawo ilimin dijital ga al’ummarmu da kuma ba kowa damar ci gaba.
+          </p>
+        </div>
+        <div class="bg-white shadow-md p-6 rounded-lg">
+          <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Ayyukanmu</h4>
+          <p class="text-gray-600">
+            Muna koyar da ƙwarewar dijital, muna sauƙaƙa koyo kuma muna shirya matasa don damammaki.
+          </p>
+        </div>
+        <div class="bg-white shadow-md p-6 rounded-lg">
+          <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Ƙimominmu</h4>
+          <p class="text-gray-600">
+            Koyo ga kowa • Kirkira • Gaskiya • Taimakawa Jama'a • Inganci • Aiki tare
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center text-[#1da1f2] mb-12">
+          Darussanmu
+        </h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Example -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <span class="pricing-badge">₦15,000</span>
+            <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Ci gaban Yanar Gizo</h4>
+            <p class="mb-4 text-gray-600">
+              Koyi HTML, CSS, JavaScript, Git/GitHub, ka gina shafin ka na farko.
+            </p>
+            <a href="#contact" class="text-[#1da1f2] font-semibold">Yi Rijista <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <span class="pricing-badge">₦10,000</span>
+            <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Asalin Kwamfuta</h4>
+            <p class="text-gray-600 mb-4">
+              Darasi na zahiri: Koyi amfani da kwamfuta, Microsoft Office da intanet.
+            </p>
+            <a href="#contact" class="text-[#1da1f2] font-semibold">Yi Rijista <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <span class="pricing-badge">₦12,000</span>
+            <h4 class="text-xl font-semibold mb-3 text-[#1da1f2]">Zanen Graphics</h4>
+            <p class="text-gray-600 mb-4">
+              Darasi na zahiri: Koyi amfani da kayan aiki kamar Inkscape da Figma don logo da social media.
+            </p>
+            <a href="#contact" class="text-[#1da1f2] font-semibold">Yi Rijista <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center text-[#1da1f2] mb-12">
+          Abin da Dalibanmu Suka Ce
+        </h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="testimonial-card p-6">
+            <h4 class="font-semibold">James O.</h4>
+            <p class="text-sm text-gray-500">Dalibin Web Development</p>
+            <p class="text-gray-600">
+              "Darasin web development ya sauya rayuwata. Yanzu ina aiki a matsayin mai haɓaka yanar gizo."
+            </p>
+          </div>
+
+          <div class="testimonial-card p-6">
+            <h4 class="font-semibold">Amina S.</h4>
+            <p class="text-sm text-gray-500">Dalibar Zanen Graphics</p>
+            <p class="text-gray-600">
+              "Ban taba tunanin zan iya zane ba sai na shiga wannan makaranta. Malamai suna da haƙuri sosai."
+            </p>
+          </div>
+
+          <div class="testimonial-card p-6">
+            <h4 class="font-semibold">John T.</h4>
+            <p class="text-sm text-gray-500">Dalibin Asalin Kwamfuta</p>
+            <p class="text-gray-600">
+              "Na fara daga tushe amma yanzu na iya amfani da kwamfuta da kwarin gwiwa. Wannan makaranta ta taimaka min sosai."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+      <p>© 2025 Digital Solution Academy. Duk haƙƙoƙi na musamman.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

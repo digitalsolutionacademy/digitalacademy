@@ -14,6 +14,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
     <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
@@ -53,7 +54,7 @@
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
           <!-- Register Now Button (Mobile) -->
-             <a
+          <a
             href="Register.html"
             class="bg-[#fbad17] text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 text-center mt-2">
             Register Now
@@ -145,16 +146,16 @@
             </button>
           </form>
 
-         
-        <div class="login-footer">
-          <p class="text-sm text-gray-600">
-            Don't have an account?
-            <a
-              href="Register.html"
-              class="text-[#1da1f2] font-medium hover:underline"
-              >Register here</a
-            >
-          </p>
+          <div class="login-footer">
+            <p class="text-sm text-gray-600">
+              Don't have an account?
+              <a
+                href="Register.html"
+                class="text-[#1da1f2] font-medium hover:underline"
+                >Register here</a
+              >
+            </p>
+          </div>
         </div>
       </div>
     </main>
@@ -180,6 +181,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
