@@ -124,39 +124,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Testimonial styles */
-.testimonial-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-.testimonial-card::before {
-  content: '"';
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  font-size: 80px;
-  color: #1da1f2;
-  font-family: Arial, sans-serif;
-}
-
-/* Form styles */
-.form-input {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  transition: all 0.3s;
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: #1da1f2;
-  box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.2);
-}
-
 /* Pricing badge */
 .pricing-badge {
   position: absolute;
@@ -185,32 +152,6 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-.error-message {
-  color: #dc2626;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
-input.error {
-  border-color: #dc2626;
-  border-width: 2px;
-}
-
-.password-strength {
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.password-strength.weak {
-  color: #dc2626;
-}
-.password-strength.medium {
-  color: #d97706;
-}
-.password-strength.strong {
-  color: #059669;
 }
 
 .card-hover {
@@ -269,6 +210,7 @@ input.error {
   background-color: #fbbf24;
   color: white;
   margin-bottom: 15px;
+  flex-shrink: 0;
 }
 
 .form-input {
@@ -282,7 +224,7 @@ input.error {
 }
 
 .submit-btn {
-  background: linear-gradient(45deg, #1da1f2, #0c7abf);
+  background: linear-gradient(45deg, #0c7abf, #0c7abf);
   transition: all 0.3s ease;
 }
 
@@ -290,4 +232,44 @@ input.error {
   background: linear-gradient(45deg, #0c7abf, #1da1f2);
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(29, 161, 242, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-info-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .contact-details {
+    margin-left: 0;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .subsection-title {
+    font-size: 1.25rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-icon i {
+    font-size: 1rem;
+  }
 }
