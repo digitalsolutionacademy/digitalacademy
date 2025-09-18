@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 450px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+  overflow: hidden;
+}
+
+.modal-overlay.active .modal-container {
+  transform: translateY(0);
+}
+
+.option-card {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.option-card:hover {
+  background-color: #f1f5f9;
+  border-color: #1da1f2;
+  color: #1da1f2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(29, 161, 242, 0.15);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: hsla(0, 100%, 42%, 2);
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #64748b;
+}
+
+/* Demo buttons styling */
+.demo-btn {
+  background: linear-gradient(45deg, #1da1f2, #0c7abf);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.demo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(29, 161, 242, 0.3);
+}

@@ -15,6 +15,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0c7abf",
+              secondary: "#fbad17",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body class="antialiased">
     <header class="hero-gradient text-white shadow-md fixed w-full z-50">
@@ -67,6 +80,7 @@
           <!-- Register Now Button -->
           <a
             href="#"
+            data-modal-trigger="trigger-2"
             aria-disabled=""
             class="bg-[#fbad17] text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ml-4">
             Register Now
@@ -138,6 +152,7 @@
           <div class="flex flex-col sm:flex-row gap-4">
             <a
               href="#"
+              data-modal-trigger="trigger-1"
               class="bg-[#fbad17] text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Register Now! <i class="fas fa-arrow-right ml-2"></i>
             </a>
@@ -660,6 +675,37 @@
         </div>
       </div>
     </section>
+
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="modal-overlay">
+      <div class="modal-container">
+        <!-- Modal Header -->
+        <div class="bg-primary text-white p-6">
+          <button class="close-btn" onclick="closeModal()">
+            <i class="fas fa-times"></i>
+          </button>
+          <h3 class="text-2xl font-bold text-center">Course Registration</h3>
+          <p class="text-center text-blue-100 mt-2">
+            Choose your preferred class format
+          </p>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="p-6">
+          <div class="grid grid-cols-1 gap-4 mb-8">
+            <!-- Online Class Option -->
+            <a href="Register.html" class="option-card" data-option="online">
+              Online Class
+            </a>
+
+            <!-- Physical Class Option -->
+            <a href="physical-registration.html" class="option-card" data-option="physical">
+              Physical Class
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-8 text-center">
       <div class="container mx-auto px-6">

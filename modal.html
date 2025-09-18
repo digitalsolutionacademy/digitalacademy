@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Registration Modal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1da1f2",
+              secondary: "#fbad17",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f9fafb;
+      }
+
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal-container {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        width: 90%;
+        max-width: 450px;
+        transform: translateY(20px);
+        transition: transform 0.4s ease;
+        overflow: hidden;
+      }
+
+      .modal-overlay.active .modal-container {
+        transform: translateY(0);
+      }
+
+      .option-card {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        background-color: #f8fafc;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #1e293b;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+        position: relative;
+      }
+
+      .option-card:hover {
+        background-color: #f1f5f9;
+        border-color: #1da1f2;
+        color: #1da1f2;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(29, 161, 242, 0.15);
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: hsla(0, 100%, 42%, 2);
+        cursor: pointer;
+        padding: 5px;
+        transition: color 0.3s ease;
+      }
+
+      .close-btn:hover {
+        color: #64748b;
+      }
+
+      /* Demo buttons styling */
+      .demo-btn {
+        background: linear-gradient(45deg, #1da1f2, #0c7abf);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      .demo-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(29, 161, 242, 0.3);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 min-h-screen flex flex-col items-center justify-center p-4">
+    <h1 class="text-2xl font-bold text-primary mb-8">
+      Registration Modal Demo
+    </h1>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <!-- Demo buttons to show the modal (you'll connect this to your Register buttons) -->
+      <button class="demo-btn" data-modal-trigger="trigger-1">
+        Register Now (Header)
+      </button>
+
+      <button class="demo-btn" data-modal-trigger="trigger-2">
+        Register Now (Footer)
+      </button>
+    </div>
+
+    <p class="text-gray-600 max-w-lg text-center">
+      This demonstrates how the same modal can be triggered from multiple places
+      on your website.
+    </p>
+
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="modal-overlay">
+      <div class="modal-container">
+        <!-- Modal Header -->
+        <div class="bg-primary text-white p-6">
+          <button class="close-btn" onclick="closeModal()">
+            <i class="fas fa-times"></i>
+          </button>
+          <h3 class="text-2xl font-bold text-center">Course Registration</h3>
+          <p class="text-center text-blue-100 mt-2">
+            Choose your preferred class format
+          </p>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="p-6">
+          <div class="grid grid-cols-1 gap-4 mb-8">
+            <!-- Online Class Option -->
+            <a href="Register.html" class="option-card" data-option="online">
+              Online Class
+            </a>
+
+            <!-- Physical Class Option -->
+            <a href="#" class="option-card" data-option="physical">
+              Physical Class
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Get modal element
+      const modal = document.getElementById("registration-modal");
+
+      // Function to open modal
+      function openModal() {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+      }
+
+      // Function to close modal
+      function closeModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = ""; // Re-enable scrolling
+      }
+
+      // Close modal when clicking outside
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+          closeModal();
+        }
+      });
+
+      // Set up multiple triggers (in your actual implementation)
+      document.addEventListener("DOMContentLoaded", function () {
+        // This would be your actual Register buttons
+        const demoTriggers = document.querySelectorAll("[data-modal-trigger]");
+
+        demoTriggers.forEach((trigger) => {
+          trigger.addEventListener("click", openModal);
+        });
+
+     
+      });
+    </script>
+  </body>
+</html>

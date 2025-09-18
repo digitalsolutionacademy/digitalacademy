@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Class Registration - Digital Solution Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0c7abf',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
+        }
+        
+        .form-container {
+            box-shadow: 0 15px 30px rgba(12, 122, 191, 0.15);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, #0c7abf 0%, #1da1f2 100%);
+        }
+        
+        .form-input {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .form-input:focus {
+            border-color: #0c7abf;
+            box-shadow: 0 0 0 3px rgba(12, 122, 191, 0.2);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #0c7abf 0%, #1da1f2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #0a6aac 0%, #0c7abf 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(12, 122, 191, 0.3);
+        }
+        
+        .course-checkbox:checked {
+            background-color: #0c7abf;
+            border-color: #0c7abf;
+        }
+        
+        .step-indicator {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #e6f7ff;
+            color: #0c7abf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        
+        .step-indicator.active {
+            background-color: #0c7abf;
+            color: white;
+        }
+        
+        .step-connector {
+            flex: 1;
+            height: 2px;
+            background-color: #e5e7eb;
+        }
+        
+        .step-connector.active {
+            background-color: #0c7abf;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-8 px-4">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-primary mb-2">Digital Solution Academy</h1>
+            <p class="text-gray-600">Register for Physical Classes</p>
+        </div>
+        
+        <!-- Progress Steps -->
+        <div class="flex items-center justify-between mb-10 max-w-lg mx-auto">
+            <div class="flex items-center">
+                <div class="step-indicator active">1</div>
+                <div class="ml-2 text-sm font-medium text-primary">Personal Info</div>
+            </div>
+            <div class="step-connector mx-2 active"></div>
+            <div class="flex items-center">
+                <div class="step-indicator">2</div>
+                <div class="ml-2 text-sm font-medium text-gray-500">Course Selection</div>
+            </div>
+            <div class="step-connector mx-2"></div>
+            <div class="flex items-center">
+                <div class="step-indicator">3</div>
+                <div class="ml-2 text-sm font-medium text-gray-500">Payment</div>
+            </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="form-container bg-white">
+            <!-- Form Header -->
+            <div class="form-header text-white p-6 text-center">
+                <h2 class="text-2xl font-bold">Physical Class Registration</h2>
+                <p class="mt-2">Join our on-campus learning experience</p>
+            </div>
+            
+            <!-- Form Content -->
+            <form class="p-6 md:p-8">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-primary mb-4 border-b pb-2">Personal Information</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="fullname" class="block text-gray-700 mb-2">Full Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="fullname" class="w-full px-4 py-3 rounded-lg form-input focus:outline-none" placeholder="Your full name" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email Address <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg form-input focus:outline-none" placeholder="Your email address" required>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Phone Number <span class="text-red-500">*</span></label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg form-input focus:outline-none" placeholder="Your phone number" required>
+                        </div>
+                        
+                        <div>
+                            <label for="dob" class="block text-gray-700 mb-2">Date of Birth <span class="text-red-500">*</span></label>
+                            <input type="date" id="dob" class="w-full px-4 py-3 rounded-lg form-input focus:outline-none" required>
+                        </div>
+                        
+                        <div>
+                            <label for="address" class="block text-gray-700 mb-2">Address <span class="text-red-500">*</span></label>
+                            <input type="text" id="address" class="w-full px-4 py-3 rounded-lg form-input focus:outline-none" placeholder="Your full address" required>
+                        </div>
+                        
+                        <div>
+                            <label for="education" class="block text-gray-700 mb-2">Education Level <span class="text-red-500">*</span></label>
+                            <select id="education" class="w-full px-4 py-3 rounded-lg form-input focus:outline-none" required>
+                                <option value="">Select education level</option>
+                                <option value="high-school">High School</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="bachelor">Bachelor's Degree</option>
+                                <option value="master">Master's Degree</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-primary mb-4 border-b pb-2">Course Selection</h3>
+                    <p class="text-gray-600 mb-6">Select the course(s) you want to enroll in:</p>
+                    
+                    <div class="grid grid-cols-1 gap-4">
+                        <label class="flex items-start p-4 border rounded-lg hover:bg-blue-50 cursor-pointer transition-colors">
+                            <input type="checkbox" class="course-checkbox h-5 w-5 text-primary mt-1 mr-4">
+                            <div>
+                                <h4 class="font-semibold">Computer Fundamental</h4>
+                                <p class="text-sm text-gray-600 mt-1">Learn the basics of using computers, Microsoft Office, and the internet.</p>
+                                <p class="text-primary font-medium mt-2">₦10,000</p>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-start p-4 border rounded-lg hover:bg-blue-50 cursor-pointer transition-colors">
+                            <input type="checkbox" class="course-checkbox h-5 w-5 text-primary mt-1 mr-4">
+                            <div>
+                                <h4 class="font-semibold">Computer Hardware Engineering</h4>
+                                <p class="text-sm text-gray-600 mt-1">Learn computer assembly, troubleshooting, repair, and maintenance techniques.</p>
+                                <p class="text-primary font-medium mt-2">₦35,000</p>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-start p-4 border rounded-lg hover:bg-blue-50 cursor-pointer transition-colors">
+                            <input type="checkbox" class="course-checkbox h-5 w-5 text-primary mt-1 mr-4">
+                            <div>
+                                <h4 class="font-semibold">Web Development</h4>
+                                <p class="text-sm text-gray-600 mt-1">Learn HTML, CSS, JavaScript, Git/GitHub, and build your first website.</p>
+                                <p class="text-primary font-medium mt-2">₦45,000</p>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-start p-4 border rounded-lg hover:bg-blue-50 cursor-pointer transition-colors">
+                            <input type="checkbox" class="course-checkbox h-5 w-5 text-primary mt-1 mr-4">
+                            <div>
+                                <h4 class="font-semibold">Ethical Hacking</h4>
+                                <p class="text-sm text-gray-600 mt-1">Learn cybersecurity fundamentals, penetration testing, and network security.</p>
+                                <p class="text-primary font-medium mt-2">₦50,000</p>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-start p-4 border rounded-lg hover:bg-blue-50 cursor-pointer transition-colors">
+                            <input type="checkbox" class="course-checkbox h-5 w-5 text-primary mt-1 mr-4">
+                            <div>
+                                <h4 class="font-semibold">Graphics Design</h4>
+                                <p class="text-sm text-gray-600 mt-1">Learn design principles and tools like Inkscape and Figma for logos and social media.</p>
+                                <p class="text-primary font-medium mt-2">₦12,000</p>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-start p-4 border rounded-lg hover:bg-blue-50 cursor-pointer transition-colors">
+                            <input type="checkbox" class="course-checkbox h-5 w-5 text-primary mt-1 mr-4">
+                            <div>
+                                <h4 class="font-semibold">Crypto & Blockchain</h4>
+                                <p class="text-sm text-gray-600 mt-1">Learn cryptocurrency fundamentals, trading strategies, and blockchain technology.</p>
+                                <p class="text-primary font-medium mt-2">₦30,000</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-primary mb-4 border-b pb-2">Preferred Schedule</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="schedule" class="block text-gray-700 mb-2">Preferred Class Time <span class="text-red-500">*</span></label>
+                            <select id="schedule" class="w-full px-4 py-3 rounded-lg form-input focus:outline-none" required>
+                                <option value="">Select preferred time</option>
+                                <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                <option value="afternoon">Afternoon (1:00 PM - 5:00 PM)</option>
+                                <option value="evening">Evening (5:30 PM - 8:30 PM)</option>
+                                <option value="weekend">Weekend (9:00 AM - 4:00 PM)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="start-date" class="block text-gray-700 mb-2">Preferred Start Date <span class="text-red-500">*</span></label>
+                            <input type="date" id="start-date" class="w-full px-4 py-3 rounded-lg form-input focus:outline-none" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-10">
+                    <button type="submit" class="submit-btn py-3 px-8 rounded-lg text-white font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        Complete Registration <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <p class="text-center text-gray-500 text-sm mt-6">
+                    By registering, you agree to our <a href="#" class="text-primary hover:underline">Terms of Service</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a>
+                </p>
+            </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="mt-8 text-center text-gray-600">
+            <p>Need help? Contact us at <a href="mailto:digitalsolutionacademic@gmail.com" class="text-primary hover:underline">digitalsolutionacademic@gmail.com</a> or call <a href="tel:+2349071743490" class="text-primary hover:underline">+234 907 174 3490</a></p>
+        </div>
+    </div>
+</body>
+</html>

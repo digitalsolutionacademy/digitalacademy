@@ -226,7 +226,10 @@
             <button id="menu-toggle" class="md:hidden mr-4 text-white">
               <i class="fas fa-bars text-xl"></i>
             </button>
-            <h2 class="text-xl font-bold">Welcome back, Nasir!</h2>
+            <!-- 🔥 Student Name -->
+            <h2 class="text-xl font-bold">
+              Welcome back, <span id="fullname"></span>!
+            </h2>
           </div>
 
           <div class="flex items-center space-x-4">
@@ -239,10 +242,11 @@
             </button>
             <button class="flex items-center">
               <div
-                class="w-8 h-8 rounded-full bg-white text-[#1da1f2] flex items-center justify-center font-bold mr-2">
+                class="w-8 h-8 rounded-full bg-white text-[#1da1f2] flex items-center justify-center font-bold mr-2"
+                id="avatarInitials">
                 NS
               </div>
-              <span class="hidden md:inline">Nasir Musa</span>
+              <span class="hidden md:inline" id="profileName">Loading...</span>
             </button>
           </div>
         </div>
@@ -436,39 +440,30 @@
                 <label class="block text-gray-700 mb-2 font-medium"
                   >Full Name</label
                 >
-                <input type="text" value="Nasir Musa" class="form-input" />
+                <input type="text" id="fullnameInput" class="form-input" />
               </div>
 
               <div class="mb-6">
                 <label class="block text-gray-700 mb-2 font-medium"
                   >Email Address</label
                 >
-                <input
-                  type="email"
-                  value="nasirmusa@gmail.com"
-                  class="form-input" />
+                <input type="email" id="emailInput" class="form-input" />
               </div>
 
               <div class="mb-6">
                 <label class="block text-gray-700 mb-2 font-medium"
                   >Phone Number</label
                 >
-                <input
-                  type="tel"
-                  value="+234 907 194 3490"
-                  class="form-input" />
+                <input type="tel" id="phoneInput" class="form-input" />
               </div>
             </div>
 
             <div>
               <div class="mb-6">
                 <label class="block text-gray-700 mb-2 font-medium"
-                  >School/Institution</label
+                  >Course</label
                 >
-                <input
-                  type="text"
-                  value="Digital Solution Academy"
-                  class="form-input" />
+                <input type="text" id="courseInput" class="form-input" />
               </div>
 
               <div class="mb-6">
@@ -477,7 +472,7 @@
                 >
                 <input
                   type="text"
-                  value="March 15, 2025"
+                  id="enrollmentDate"
                   disabled
                   class="form-input bg-gray-100" />
               </div>
@@ -488,7 +483,7 @@
                 >
                 <input
                   type="text"
-                  value="DSA-2025-0382"
+                  id="studentId"
                   disabled
                   class="form-input bg-gray-100" />
               </div>
@@ -501,8 +496,8 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="dashboard.js"></script>
-    
+
+    <script type="module" src="js/dashboard.js"></script>
+    <script type="module" src="js/firebase-config.js"></script>
   </body>
 </html>
